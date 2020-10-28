@@ -71,184 +71,137 @@ class _HomeState extends State<Home> {
 
   Widget home() {
     return Center(
-        child: Container(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.amber,
-                    Colors.redAccent,
-                    Colors.deepPurpleAccent,
-                    Colors.blueAccent
-                  ])),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              roundedBox(
-                  Colors.grey.shade900,
-                  Text(
-                    "Willkommen in der offiziellen MasterOf13FPS App!",
-                    style: TextStyle(fontSize: 24),
-                    textAlign: TextAlign.center,
-                  )),
-              roundedBox(
-                  Colors.grey.shade900, Image.asset("assets/images/logo.png")),
-              roundedBox(
-                  Colors.grey.shade900,
-                  Column(children: [
-                    FlatButton(
-                      child: Text("Über die App", style: TextStyle(fontSize: 20)),
-                      color: Theme.of(context).accentColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20))),
-                      onPressed: () {
-                        showAboutDialog(
-                            context: context,
-                            children: [
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text("Changelog", style: TextStyle(fontSize: 24)),
-                                  SizedBox(height: 5),
-                                  Divider(height: 1, color: Colors.grey),
-                                  SizedBox(height: 5),
-                                  roundedBox(
-                                      Colors.grey.shade900,
-                                      Column(children: [
-                                        Text("27. September 2020",
-                                            style: TextStyle(fontSize: 20)),
-                                        SizedBox(height: 5),
-                                        Text("- Forum hinzugefügt",
-                                            style: TextStyle(fontSize: 18)),
-                                        Text("- Discord hinzugefügt",
-                                            style: TextStyle(fontSize: 18)),
-                                        Text("- Telegram hinzugefügt",
-                                            style: TextStyle(fontSize: 18)),
-                                        Text("- Twitter hinzugefügt",
-                                            style: TextStyle(fontSize: 18)),
-                                        Text("- Changelog hinzugefügt",
-                                            style: TextStyle(fontSize: 18)),
-                                        Text("- AppDrawer hinzugefügt",
-                                            style: TextStyle(fontSize: 18)),
-                                        Text("- Startseite erstellt",
-                                            style: TextStyle(fontSize: 18)),
-                                        Text("- Beginn der App-Entwicklung",
-                                            style: TextStyle(fontSize: 18)),
-                                      ])),
-                                ],
-                              ),
-                            ],
-                            applicationName: "MasterOf13FPS",
-                            applicationVersion: "1.0");
-                      },
-                    ),
-                    SizedBox(height: 5),
-                    Divider(height: 1, color: Colors.grey),
-                    SizedBox(height: 5),
-                    Text(
-                      "made by CrazyMemeCoke",
-                      style: TextStyle(fontSize: 16),
-                      textAlign: TextAlign.center,
-                    )
-                  ]))
-            ],
-          ),
-        ));
-  }
-
-  Widget drawer() {
-    return ListView(
-      children: [
-        Stack(
-          alignment: Alignment.center,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 18, 18, 18),
+        ),
+        child: ListView(
           children: [
-            Image.asset("assets/images/background.jpeg",
-                fit: BoxFit.fill,
-                height: 150,
-                width: MediaQuery.of(context).size.width),
-            roundedBox(
-                Colors.grey.shade900,
-                Column(children: [
-                  Text("MasterOf13FPS App"),
-                  Text("Version: " + appVersion),
-                ])),
+            SizedBox(height: 10),
+            Image.asset("assets/images/logo.png"),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                FlatButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  color: Colors.orange,
+                  height: 200,
+                  minWidth: 200,
+                  onPressed: () {},
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("Hi"),
+                    ],
+                  ),
+                ),
+                SizedBox(width: 10),
+                FlatButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  color: Colors.deepPurpleAccent,
+                  height: 200,
+                  minWidth: 200,
+                  onPressed: () {},
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("Hi"),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                FlatButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  color: Colors.redAccent,
+                  height: 200,
+                  minWidth: 200,
+                  onPressed: () {},
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("Hi"),
+                    ],
+                  ),
+                ),
+                SizedBox(width: 10),
+                FlatButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  color: Colors.lightBlueAccent,
+                  height: 200,
+                  minWidth: 200,
+                  onPressed: () {},
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("Hi"),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                FlatButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  color: Colors.yellow.shade700,
+                  height: 200,
+                  minWidth: 200,
+                  onPressed: () {},
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("Hi"),
+                    ],
+                  ),
+                ),
+                SizedBox(width: 10),
+                FlatButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  color: Colors.green.shade700,
+                  height: 200,
+                  minWidth: 200,
+                  onPressed: () {},
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("Hi"),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
-        SizedBox(height: 5),
-        Text("Start",
-            style: TextStyle(fontSize: 20), textAlign: TextAlign.center),
-        SizedBox(height: 5),
-        ListTile(
-          title: Text("Startseite"),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20))),
-          onTap: () {
-            setState(() {
-              bodyWidget = home();
-              Navigator.of(context).pop();
-            });
-          },
-        ),
-        SizedBox(height: 5),
-        Divider(height: 1, color: Colors.grey),
-        SizedBox(height: 5),
-        Text("Links",
-            style: TextStyle(fontSize: 20), textAlign: TextAlign.center),
-        SizedBox(height: 5),
-        ListTile(
-          title: Text("Forum"),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20))),
-          onTap: () {
-            setState(() {
-              bodyWidget = forumPage();
-              Navigator.of(context).pop();
-            });
-          },
-        ),
-        SizedBox(height: 5),
-        Divider(height: 1, color: Colors.grey),
-        SizedBox(height: 5),
-        Text("Kontaktmöglichkeiten",
-            style: TextStyle(fontSize: 20), textAlign: TextAlign.center),
-        SizedBox(height: 5),
-        ListTile(
-          title: Text("Discord"),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20))),
-          onTap: () {
-            setState(() {
-              bodyWidget = discordPage();
-              Navigator.of(context).pop();
-            });
-          },
-        ),
-        ListTile(
-          title: Text("Telegram"),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20))),
-          onTap: () {
-            setState(() {
-              bodyWidget = telegramPage();
-              Navigator.of(context).pop();
-            });
-          },
-        ),
-        ListTile(
-          title: Text("Twitter"),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20))),
-          onTap: () {
-            setState(() {
-              bodyWidget = twitterPage();
-              Navigator.of(context).pop();
-            });
-          },
-        ),
-      ],
+      ),
     );
   }
 
@@ -279,8 +232,7 @@ class _HomeState extends State<Home> {
         title: Text("MasterOf13FPS"),
         backgroundColor: Theme.of(context).accentColor,
       ),
-      body: bodyWidget,
-      drawer: Drawer(child: drawer()),
+      body: home(),
     );
   }
 }
